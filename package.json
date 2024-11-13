@@ -1,7 +1,7 @@
 {
   "name": "paradise_resort",
   "version": "0.0.1",
-  "description": "",
+  "description": "<br />",
   "author": "LeQuocNgo TranTienNhat TranAnhKhoi NguyenHoNhatKhoa NguyenTuanPhat",
   "private": true,
   "license": "UNLICENSED",
@@ -98,5 +98,10 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": []
 }
