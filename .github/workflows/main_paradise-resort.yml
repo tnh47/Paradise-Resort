@@ -27,6 +27,7 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
       id-token: write #This is required for requesting the JWT
+      contents: read
     steps:      
       - name: Login to Azure
         uses: azure/login@v2
