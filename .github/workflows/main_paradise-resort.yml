@@ -25,7 +25,7 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          npx prisma migrate deploy
+          npm run test --if-present
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -57,9 +57,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D9CFA6F7C0A446D7BC4E834B82D50AA6 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0AE6DF2036074A74BFD99775BAEA54BD }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FBF4B85F691D4788BD7466E1F6600548 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0B1033B736D44391AF83CDD795AC266F }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5AC4B96F02884211B8B40A74C10CC8C5 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_794148728C4B431E870ED3F16B2E0181 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
