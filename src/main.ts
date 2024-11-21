@@ -6,15 +6,15 @@ import { ValidationPipe } from '@nestjs/common'
 import Handlebars from 'handlebars'
 
 // For dev local
-// import * as exphbs from 'express-handlebars';
-// import * as cookieParser from 'cookie-parser';
+import * as exphbs from 'express-handlebars';
+import * as cookieParser from 'cookie-parser';
 
 // For hosting on vercel
-import exphbs from 'express-handlebars';
-import cookieParser from 'cookie-parser';
+// import exphbs from 'express-handlebars';
+// import cookieParser from 'cookie-parser';
 
 declare const module: any;
-
+const port = process.env.PORT || 3000
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule)
 
@@ -49,6 +49,6 @@ async function bootstrap() {
 
   app.setViewEngine('hbs')
 
-  await app.listen(3000)
+  await app.listen(port)
 }
 bootstrap()
