@@ -2,7 +2,7 @@ function getCurrentURL () {
   return window.location.href
 }
 const url = getCurrentURL()
-const socket = io('wss://paradise-resort-bice.vercel.app', {
+const socket = io('https://paradise-resort-d6dba2hndmcxghgz.southeastasia-01.azurewebsites.net', {
         transports: ['websocket'],
     });
 let roomName = '';
